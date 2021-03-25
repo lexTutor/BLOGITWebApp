@@ -1,0 +1,9 @@
+﻿@using BLOGIT.UserInterface
+@using BLOGIT.UserInterface.Models
+@using BLOGIT.Models.ViewModels;
+@using BLOGIT.Models.UserServicesViewModels
+@using Microsoft.AspNetCore.Identity;
+@using BLOGIT.Models;
+@inject UserManager<BlogUser> _userMngr;
+@inject SignInManager<BlogUser> _signInMngr;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

@@ -1,0 +1,120 @@
+﻿
+@{ 
+    var photoPath = "";
+    if (_signInMngr.IsSignedIn(User) && _userMngr.GetUserAsync(User) != null)
+    {
+        photoPath = "~/Images/" + ((await _userMngr.GetUserAsync(User)).ProfilePhoto?? "Blog it.png");
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BLOGIT.UserInterface</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark box-shadow mb-0">
+            <div class="container">
+                <a style="font-weight: bold" class="text-white navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BLOG<span style="color: #FA2ABF">IT</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="text-white fas fa-th"></i>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    @if (!_signInMngr.IsSignedIn(User))
+                    {
+                        <ul class="navbar-nav flex-grow-1 justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="SignUp">Sign Up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-pink" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="m-sm-1">@_userMngr.GetUserName(User)</span>
+                                <span class="m-sm-1">
+                                    <img class="img-thumbnail img-fluid" src="@photoPath" style="max-height: 20px; max-width: 20px; border-radius: 30%; padding: 0" asp-append-version="true" />
+                                </span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-action="Index" asp-controller="Home">Home</a>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="Admin">Your Dashboard</a>
+                                }
+                                else if ((User.IsInRole("Editor") || User.IsInRole("ProEditor")))
+                                {
+                                    <a class="dropdown-item" asp-action="Editor" asp-controller="Editor">Your Dashboard</a>
+                                }
+                                else if (User.IsInRole("Member"))
+                                {
+                                    <a class="dropdown-item" asp-action="Member" asp-controller="Members">Your Dashboard</a>
+                                }
+                                <a class="dropdown-item" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                <div class="dropdown-divider"></div>
+                                <form class="dropdown-item" method="post" asp-action="Logout" asp-controller="Account">
+                                    <button class="" type="submit">Logout</button>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid p-0 m-0">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-dark">
+        <div class="footer-section container">
+            <a style="font-weight: bold" class="text-white navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BLOG<span style="color: #FA2ABF">IT</span></a>
+            <div class="link-routes">
+                <p><a class="text-white" href="#">Home</a></p>
+                <p><a class="text-white" href="#">Login</a></p>
+                <p><a class="text-white" href="#">Terms & Conditions</a></p>
+            </div>
+            <hr class="footer-line" />
+            <div class="subscribe-subsection">
+                <form action="/" method="post">
+                    <div class="form-wrapper">
+                        <p class="text-white font-weight-bold">
+                            Subscribe to our Email List
+                        </p>
+                        <input class="email-input" type="email" name="name" value="" placeholder="enter your email" />
+                        <button type="submit" class="button1 text-white"><span>Submit</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/font-awesome/js/all.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

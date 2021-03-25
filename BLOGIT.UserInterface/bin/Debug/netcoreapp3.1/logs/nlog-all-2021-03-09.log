@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+2021-03-09 01:50:17.2985|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 02:04:04.8901|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Delete' was not found. Searched locations: /Views/Dashboards/Delete.cshtml, /Views/Shared/Delete.cshtml
+2021-03-09 02:04:05.0093|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 02:21:58.3661|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 02:22:49.6661|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 02:30:47.5381|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 02:38:27.6632|FATAL|Microsoft.AspNetCore.Hosting.Diagnostics|Application startup exception
+2021-03-09 02:49:12.9072|FATAL|Microsoft.AspNetCore.Hosting.Diagnostics|Application startup exception
+2021-03-09 03:16:36.8674|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Approve' was not found. Searched locations: /Views/Dashboards/Approve.cshtml, /Views/Shared/Approve.cshtml
+2021-03-09 03:16:36.9272|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 03:18:55.0713|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 03:21:58.3480|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 03:45:50.0610|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 03:46:05.7245|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 04:22:28.7477|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Edit' was not found. Searched locations: /Views/Dashboards/Edit.cshtml, /Views/Shared/Edit.cshtml
+2021-03-09 04:22:28.8507|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 04:23:46.8792|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Edit' was not found. Searched locations: /Views/Dashboards/Edit.cshtml, /Views/Shared/Edit.cshtml
+2021-03-09 04:23:46.9421|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 17:58:58.4223|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 18:06:40.6689|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+=======
+2021-03-09 14:06:45.9681|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 14:07:30.7692|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+>>>>>>> master
+2021-03-09 20:38:21.8438|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Approve' was not found. Searched locations: /Views/Admin/Approve.cshtml, /Views/Shared/Approve.cshtml
+2021-03-09 20:38:21.9968|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 20:39:30.4693|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 20:42:36.4788|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 20:49:26.3064|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-09 21:32:08.6981|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

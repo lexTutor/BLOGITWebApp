@@ -1,0 +1,40 @@
+<<<<<<< HEAD
+2021-03-10 10:25:35.1332|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 11:49:33.6703|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 14:46:12.6350|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 14:58:05.7470|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 15:09:59.8031|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'Login' was not found. Searched locations: /Views/Account/Login.cshtml, /Views/Shared/Login.cshtml
+2021-03-10 15:09:59.9948|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 15:29:19.3530|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 15:29:52.1212|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 15:29:54.7057|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 15:30:02.4573|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-10 15:30:39.9020|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+=======
+2021-03-10 13:22:06.6282|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'LogIn' was not found. Searched locations: /Views/Account/LogIn.cshtml, /Views/Shared/LogIn.cshtml
+2021-03-10 13:22:06.8783|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+>>>>>>> master
+2021-03-10 20:52:24.1720|ERROR|BLOGIT.UserInterface.Controllers.AccountController|The specified string is not in the form required for an e-mail address.
+2021-03-10 20:52:32.9199|ERROR|BLOGIT.UserInterface.Controllers.AccountController|The specified string is not in the form required for an e-mail address.
+2021-03-10 23:58:31.3984|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "p"."PostId", "p"."ApprovalState", "p"."CreationDate", "p"."ImagePath", "p"."PostCreatorId", "p"."PostDetails", "p"."PostTitle", "a"."Id", "a"."AccessFailedCount", "a"."Bio", "a"."City", "a"."ConcurrencyStamp", "a"."Country", "a"."Email", "a"."EmailConfirmed", "a"."FirstName", "a"."LastName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."ProfilePhoto", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName", "t"."CategoryId", "t"."PostId", "t"."CategoryId0", "t"."CategoryName"
+FROM "Post" AS "p"
+LEFT JOIN "AspNetUsers" AS "a" ON "p"."PostCreatorId" = "a"."Id"
+LEFT JOIN (
+    SELECT "p0"."CategoryId", "p0"."PostId", "c"."CategoryId" AS "CategoryId0", "c"."CategoryName"
+    FROM "PostCategories" AS "p0"
+    INNER JOIN "Categories" AS "c" ON "p0"."CategoryId" = "c"."CategoryId"
+) AS "t" ON "p"."PostId" = "t"."PostId"
+ORDER BY "p"."PostId", "a"."Id", "t"."CategoryId", "t"."PostId", "t"."CategoryId0"
+2021-03-10 23:58:31.6105|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'BLOGIT.DataAccess.DataAccessContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 11: 'database disk image is malformed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-10 23:58:31.6994|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

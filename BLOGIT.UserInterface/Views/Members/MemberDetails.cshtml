@@ -1,0 +1,69 @@
+﻿@model BlogUserViewModel
+
+@{
+    ViewData["Title"] = "MemberDetails";
+}
+
+
+<h1 class="text-center text-muted">Edit Profile</h1>
+<hr />
+
+<form enctype="multipart/form-data"  asp-action="MemberDetails" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="" style="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="h3" asp-for="FirstName"></label>
+                <input class="form-control mb-3" type="text" asp-for="FirstName" src="" style="" />
+            </div>
+            <div class="col-md-4">
+                <label class="h3" asp-for="LastName"></label>
+                <input class="form-control mb-3" type="text" asp-for="LastName" src="" style="" />
+            </div>
+            <div class="col-md-4">
+                <label class="h3" asp-for="UserName"></label>
+                <input class="form-control mb-3" type="text" asp-for="UserName" src="" style="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label class="h3 mb-3" asp-for="Email"></label>
+                <input class="form-control mb-3" type="text" asp-for="Email" src="" style="" />
+            </div>
+        </div>
+
+        <input hidden="" class="form-control mb-3" type="text" asp-for="Id" src="" style="" />
+
+        <div class="row">
+            <div class="col-md-12">
+                <label class="h3 mb-3" asp-for="PhoneNumber"></label>
+                <input class="form-control mb-3" type="text" asp-for="PhoneNumber" src="" style="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label class=" h3 mb-3" asp-for="Bio"></label>
+                <textarea rows="4" cols="50" class="form-control mb-3" type="text" asp-for="Bio" src="" style=""></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label class=" h3 mb-3" asp-for="Image">Upload Picture</label>
+                <input class="form-control mb-3"  asp-for="Image" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button style="width: 100%;" class="btn btn-primary" type="submit">Save</button>
+            </div>
+            <div class="col-md-6">
+                <a style="width: 100%;" class="btn btn-secondary" asp-action="Member" type="submit">Cancel</a>
+            </div>
+        </div>
+    </div>
+
+</form>

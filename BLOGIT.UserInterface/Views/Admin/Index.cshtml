@@ -1,0 +1,111 @@
+﻿@model DataForAdminVM
+@{
+    ViewData["Title"] = "AdminDashboard";
+    var photopPath = "~/Images/" + (Model.UserDetails.ImagePath ?? "blog it.png");
+}
+
+<section class="page-intro">
+    <h1 class="hero-title text-white text-center justify-content-center align-items-center flex-column">Your Dashboard 😎 </h1>
+    <h2 class="Anime"> BLOGIT or forget it...</h2>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="user-details card">
+                    <img style="border-radius: 50%; width: 150px; height: 150px;" src="@photopPath" class="p-3 m-auto card-img-top" alt="..." asp-append-version="true"/>
+                    <h1 class="user-detail-title text-center">@Model.UserDetails.UserName</h1>
+                    <div class="card-body">
+                        <p class="user-detail-phone text-center">@Model.UserDetails.PhoneNumber</p>
+                        <p class="user-detail-bio text-justify text-center card-text">
+                            @Model.UserDetails.Bio
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="" class="activity col-md-8">
+                <div class="btns-upper pt-3 pb-3">
+                    <a class="search-it" href="#"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</a>
+                </div>
+                @{
+                    foreach (var post in Model.AllSinglePosts)
+                    {
+                        <div class="tabs">
+                            <h4>@post.PostTitle By: @post.PostCreatorName</h4>
+                            <div class="btn-tabs">
+                                <a class="btn btn-danger" asp-controller="Admin" asp-action="DeletePost" asp-route-postId="@post.PostId"><i class="fas fa-trash-alt"></i></a>
+                                <a class="btn btn-success" asp-controller="Admin" asp-action="Approve" asp-route-postId="@post.PostId"><i class="fas fa-check"></i></a>
+                                @{
+                                    if (post.ApprovalState == true)
+                                    {
+                                        <a class="btn btn-success"><i class="fas fa-info"></i></a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-danger"><i class="fas fa-info"></i></a>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="update card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">All Posts</h5>
+                        <h1 class="font-weight-bold card-text">
+                           @Model.PostCount
+                        </h1>
+                    </div>
+                </div>
+                <div class="update card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">All Users</h5>
+                        <h1 class="font-weight-bold card-text">
+                            @Model.UsersCount
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class=" activity col-md-8">
+                <div class="btns-upper pt-3 pb-3">
+                    <a class="btn btn-dark " asp-action="ListOfRoles"><i class="fas fa-user-friends"></i>&nbsp;Manage Roles</a>
+                    <a class="search-it" href="#"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</a>
+                </div>
+                @foreach (var user in Model.AllUsers)
+                {
+                    <div class="tabs">
+                        <h4>@user.UserName</h4>
+                        <div class="btn-tabs">
+                            <a class="btn btn-danger" asp-route-id="@user.Id" asp-controller="Admin" asp-action="DeleteUser"><i class="fas fa-trash-alt"></i></a>
+                            <a class="btn btn-change" asp-route-id="@user.Id" asp-controller="Admin" asp-action="DetailsUser"><i class="far fa-file-alt"></i></a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-4"></div>
+            <div class="pb-3 activity col-md-8">
+                <div class="btns-upper pt-3 pb-3">
+                    <a class="text-right btn btn-change" href="#"><i class="fas fa-plus"></i>&nbsp;&nbsp;Manage Posts</a>
+                    <a class="search-it" href="#"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</a>
+                </div>
+                <div class="tabs">
+                    <h4>Post Title</h4>
+                    <div class="btn-tabs">
+                        <a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></a>
+                        <a class="btn btn-change" href="#"><i class="fas fa-edit"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

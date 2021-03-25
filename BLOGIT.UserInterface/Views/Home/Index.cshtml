@@ -1,0 +1,46 @@
+﻿@model AllEditorDataVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="blog-intro">
+    <div class="jumbotron container bg-purple">
+        <p class="text-white m-0">Hello, Welcome to</p>
+        <h1 class="big-text text-white m-0">BLOG<span style="color: #FA2ABF">IT</span></h1>
+        <p class="text-white">
+            Its here!! All the information you need in one place. <br> BLOGIT so you dont forget it!!.
+        </p>
+    </div>
+</section>
+<section class=" search-section">
+    <div class="container">
+        <div class="row">
+            <input class="search" type="search" placeholder="search" />
+        </div>
+    </div>
+</section>
+
+        <div class="container">
+            <section class="post-section">
+                <div class="post-wrapper p-3">
+                    @{
+                        foreach (var post in Model.AllSinglePosts)
+                        {
+                            var photoPath = "~/Images/" + (post.ImagePath ?? "Blog it.png");
+                            <div class="shadow post-item card mt-3">
+                                <img src="@photoPath" class="card-img img-fluid" asp-append-version="true" />
+                                <div class="card-body">
+                                    <p>@post.PostCategories</p>
+                                    <h5 class="card-title">@post.PostTitle</h5>
+                                    <p class="card-text">
+                                        By:  @post.PostCreatorName
+                                    </p>
+                                    <a style="color: white;" asp-controller="Post" asp-action="Index" asp-route-postId="@post.PostId" class="button1"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </section>
+        </div>
+   

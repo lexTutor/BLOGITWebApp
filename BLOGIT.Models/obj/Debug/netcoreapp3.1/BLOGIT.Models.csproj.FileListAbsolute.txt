@@ -1,0 +1,12 @@
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\bin\Debug\netcoreapp3.1\BLOGIT.Models.deps.json
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\bin\Debug\netcoreapp3.1\BLOGIT.Models.dll
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\bin\Debug\netcoreapp3.1\BLOGIT.Models.pdb
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\bin\Debug\netcoreapp3.1\BLOGIT.Commons.dll
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\bin\Debug\netcoreapp3.1\BLOGIT.Commons.pdb
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\obj\Debug\netcoreapp3.1\BLOGIT.Models.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\obj\Debug\netcoreapp3.1\BLOGIT.Models.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\obj\Debug\netcoreapp3.1\BLOGIT.Models.AssemblyInfo.cs
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\obj\Debug\netcoreapp3.1\BLOGIT.Models.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\obj\Debug\netcoreapp3.1\BLOGIT.Models.csproj.CopyComplete
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\obj\Debug\netcoreapp3.1\BLOGIT.Models.dll
+C:\Users\hp\source\repos\BLogitMain\BLOGIT.Models\obj\Debug\netcoreapp3.1\BLOGIT.Models.pdb

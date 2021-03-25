@@ -1,0 +1,31 @@
+2021-03-11 00:00:49.3083|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "p"."PostId", "p"."ApprovalState", "p"."CreationDate", "p"."ImagePath", "p"."PostCreatorId", "p"."PostDetails", "p"."PostTitle", "a"."Id", "a"."AccessFailedCount", "a"."Bio", "a"."City", "a"."ConcurrencyStamp", "a"."Country", "a"."Email", "a"."EmailConfirmed", "a"."FirstName", "a"."LastName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."ProfilePhoto", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName", "t"."CategoryId", "t"."PostId", "t"."CategoryId0", "t"."CategoryName"
+FROM "Post" AS "p"
+LEFT JOIN "AspNetUsers" AS "a" ON "p"."PostCreatorId" = "a"."Id"
+LEFT JOIN (
+    SELECT "p0"."CategoryId", "p0"."PostId", "c"."CategoryId" AS "CategoryId0", "c"."CategoryName"
+    FROM "PostCategories" AS "p0"
+    INNER JOIN "Categories" AS "c" ON "p0"."CategoryId" = "c"."CategoryId"
+) AS "t" ON "p"."PostId" = "t"."PostId"
+ORDER BY "p"."PostId", "a"."Id", "t"."CategoryId", "t"."PostId", "t"."CategoryId0"
+2021-03-11 00:00:49.4156|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'BLOGIT.DataAccess.DataAccessContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 11: 'database disk image is malformed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-11 00:00:49.4737|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-11 00:02:40.1771|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-11 00:04:13.9327|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-11 00:08:15.1097|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-11 00:18:44.3096|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-11 00:29:58.3801|ERROR|BLOGIT.UserInterface.Controllers.AccountController|The parameter 'address' cannot be an empty string. (Parameter 'address')
+2021-03-11 00:29:58.5120|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-11 00:37:19.2736|ERROR|BLOGIT.UserInterface.Controllers.AccountController|The parameter 'address' cannot be an empty string. (Parameter 'address')
+2021-03-11 13:35:32.2302|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-11 13:36:22.6989|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.

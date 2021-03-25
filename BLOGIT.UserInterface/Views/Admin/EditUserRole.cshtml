@@ -1,0 +1,56 @@
+﻿@model BLOGIT.Models.UserServicesViewModels.EditRoleViewModel
+
+<h1 class="text-center text-muted">Edit Roles</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <form asp-action="EditUserRole" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Id" class="col-2 control-label"></label>
+                <input asp-for="Id" disabled class="col-10 form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoleName" class="col-2 control-label"></label>
+                <input asp-for="RoleName" class="col-10 form-control" disabled/>
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Update</button>
+                <a asp-action="ListOfRoles" class="btn btn-primary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Users in this role</h5>
+            </div>
+            <div class="card-body">
+                <div class="card-title">
+                    <h5></h5>
+                </div>
+                @if (Model.Users.Any())
+                {
+                    foreach (var user in Model.Users)
+                    {
+                        <h5>@user</h5>
+                    }
+                }
+                else
+                {
+                    <h3>No User yet</h3>
+                }
+            </div>
+            <div class="card-footer">
+                <a asp-action="EditUsersInRole" asp-route-id="@Model.Id" class="text-white btn btn-primary">Add or Delete Users</a>
+            </div>
+        </div>
+    </div>
+</div>

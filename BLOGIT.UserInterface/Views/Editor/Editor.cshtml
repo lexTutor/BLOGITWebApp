@@ -1,0 +1,73 @@
+﻿@model AllEditorDataVM
+@{
+    ViewData["Title"] = "EditorDashboard";
+    var photopPath = "~/Images/" + (Model.UserDetails.ImagePath ?? "blog it.png");
+}
+
+<section class="page-intro">
+    <h1 class="hero-title text-white text-center justify-content-center align-items-center flex-column">Your Dashboard 😎 </h1>
+    <h2 class="Anime"> BLOGIT or forget it...</h2>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="user-details card">
+                    <img style="border-radius: 50%; width: 150px; height: 150px;" src="@photopPath" class="p-3 m-auto card-img-top" alt="..." asp-append-version="true" />
+                    <h1 class="user-detail-title text-center">@Model.UserDetails.UserName</h1>
+                    <div class="card-body">
+                        <p class="user-detail-phone text-center">@Model.UserDetails.PhoneNumber</p>
+                        <p class="user-detail-bio text-justify text-center card-text">
+                            @Model.UserDetails.Bio
+                        </p>
+                    </div>
+                    <div class="btns-upper pt-3 pb-3">
+                        <a class="btn btn-change" asp-action="MemberDetails" asp-controller="Members" asp-route-userId="@Model.UserDetails.Id"><i class="fas fa-user-edit"></i>&nbsp;&nbsp;Your Details</a>
+                    </div>
+                </div>
+            </div>
+            <div style="" class="activity col-md-8">
+                <div class="btns-upper pt-3 pb-3">
+                    <a class="btn btn-change" asp-action="AddPost" asp-controller="Post"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add new Post</a>
+                    <a class="search-it" href="#"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</a>
+                </div>
+                @{
+                    foreach (var post in Model.AllSinglePosts)
+                    {
+                        <div class="tabs">
+                            <h4>@post.PostTitle By: @post.PostCreatorName</h4>
+                            <div class="btn-tabs">
+                                <a class="btn btn-danger" asp-controller="Editor" asp-action="Edit" asp-route-postId="@post.PostId"><i class="fas fa-pen-alt"></i></a>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        </div>
+
+
+        <div class="row pt-5">
+            <div class="col-md-4"> 
+            </div>
+            <div class="activity col-md-8">
+                <div class="btns-upper pt-3 pb-3">
+                    <a class="btn btn-change" href="#"><i class="fas fa-plus"></i>&nbsp;&nbsp;My Activities</a>
+                    <a class="search-it" href="#"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</a>
+                </div>
+                <div class="tabs">
+                    <h4>Username</h4>
+                    <div class="btn-tabs">
+                        <a class="btn btn-danger" href="#"><i class="fas fa-trash-alt"></i></a>
+                        <a class="btn btn-change" href="#"><i class="far fa-file-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+           
+        </div>
+    </div>
+</section>
+

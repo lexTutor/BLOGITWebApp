@@ -1,0 +1,158 @@
+<<<<<<< HEAD
+2021-03-08 00:03:39.8387|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'check' was not found. Searched locations: /Views/Post/check.cshtml, /Views/Shared/check.cshtml
+2021-03-08 00:03:40.0886|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 00:38:38.4273|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 01:30:57.9675|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 02:00:06.6603|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 02:02:13.3008|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 15:40:24.8245|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "l"."LikesId", "l"."LikedPostPostId", "l"."UserWhoLikedId"
+FROM "Likes" AS "l"
+2021-03-08 15:40:24.9997|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'BLOGIT.DataAccess.DataAccessContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: l.UserWhoLikedId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-08 15:40:25.1176|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 15:43:57.0561|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "l"."LikesId", "l"."LikedPostPostId", "l"."UserWhoLikedId"
+FROM "Likes" AS "l"
+2021-03-08 15:43:57.1602|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'BLOGIT.DataAccess.DataAccessContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: l.UserWhoLikedId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-08 15:43:57.2564|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 15:47:58.7729|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "l"."LikesId", "l"."LikedPostPostId", "l"."UserWhoLikedId"
+FROM "Likes" AS "l"
+2021-03-08 15:47:58.8891|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'BLOGIT.DataAccess.DataAccessContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: l.UserWhoLikedId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-08 15:47:59.0248|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 15:49:12.6690|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'LikePost' was not found. Searched locations: /Views/Post/LikePost.cshtml, /Views/Shared/LikePost.cshtml
+2021-03-08 15:49:12.7561|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 15:53:38.1266|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 15:57:13.9244|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'LikePost' was not found. Searched locations: /Views/Post/LikePost.cshtml, /Views/Shared/LikePost.cshtml
+2021-03-08 15:57:14.0210|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 15:58:20.5355|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'LikePost' was not found. Searched locations: /Views/Post/LikePost.cshtml, /Views/Shared/LikePost.cshtml
+2021-03-08 15:58:20.6175|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 17:23:14.8627|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'SignIn' was not found. Searched locations: /Views/Post/SignIn.cshtml, /Views/Shared/SignIn.cshtml
+2021-03-08 17:23:15.1797|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 17:29:15.0916|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'SignIn' was not found. Searched locations: /Views/Post/SignIn.cshtml, /Views/Shared/SignIn.cshtml
+2021-03-08 17:29:15.2207|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 17:32:30.1053|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'SignIn' was not found. Searched locations: /Views/Post/SignIn.cshtml, /Views/Shared/SignIn.cshtml
+2021-03-08 17:32:30.2907|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 17:36:29.5767|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'SignIn' was not found. Searched locations: /Views/Post/SignIn.cshtml, /Views/Shared/SignIn.cshtml
+2021-03-08 17:36:29.7224|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 17:37:36.0127|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'SignIn' was not found. Searched locations: /Views/Post/SignIn.cshtml, /Views/Shared/SignIn.cshtml
+2021-03-08 17:37:36.1871|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 17:41:24.4801|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'SignIn' was not found. Searched locations: /Views/Post/SignIn.cshtml, /Views/Shared/SignIn.cshtml
+2021-03-08 17:41:24.6205|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 20:48:30.1657|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 20:48:56.3788|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 20:49:23.4942|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 20:49:50.1427|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 20:51:53.1834|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 20:53:34.5030|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 20:56:17.2071|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 22:39:29.6599|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 22:51:05.4082|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 22:52:21.9348|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 23:01:01.4480|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 23:02:59.4109|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 23:51:58.4640|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (15ms) [Parameters=[@__Id_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+SELECT "p"."PostId", "p"."ApprovalState", "p"."CreationDate", "p"."ImagePath", "p"."PostCreatorId", "p"."PostDetails", "p"."PostTitle", "a"."Id", "a"."AccessFailedCount", "a"."Bio", "a"."City", "a"."ConcurrencyStamp", "a"."Country", "a"."Email", "a"."EmailConfirmed", "a"."FirstName", "a"."LastName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."ProfilePhoto", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName", "c"."CommentId", "c"."Comment", "c"."CommentTime", "c"."PostId", "c"."UserFullName", "c"."UserImage", "l"."LikesId", "l"."LikedPostPostId", "l"."UserWhoLikedId", "t"."CategoryId", "t"."PostId", "t"."CategoryId0", "t"."CategoryName"
+FROM "Post" AS "p"
+LEFT JOIN "AspNetUsers" AS "a" ON "p"."PostCreatorId" = "a"."Id"
+LEFT JOIN "Comments" AS "c" ON "p"."PostId" = "c"."PostId"
+LEFT JOIN "Likes" AS "l" ON "p"."PostId" = "l"."LikedPostPostId"
+LEFT JOIN (
+    SELECT "p0"."CategoryId", "p0"."PostId", "c0"."CategoryId" AS "CategoryId0", "c0"."CategoryName"
+    FROM "PostCategories" AS "p0"
+    INNER JOIN "Categories" AS "c0" ON "p0"."CategoryId" = "c0"."CategoryId"
+) AS "t" ON "p"."PostId" = "t"."PostId"
+WHERE "p"."PostId" = @__Id_0
+ORDER BY "p"."PostId", "a"."Id", "c"."CommentId", "l"."LikesId", "t"."CategoryId", "t"."PostId", "t"."CategoryId0"
+2021-03-08 23:51:58.6546|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'BLOGIT.DataAccess.DataAccessContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: c.UserImage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-08 23:51:58.7221|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 23:53:43.9049|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (6ms) [Parameters=[@__Id_0='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+SELECT "p"."PostId", "p"."ApprovalState", "p"."CreationDate", "p"."ImagePath", "p"."PostCreatorId", "p"."PostDetails", "p"."PostTitle", "a"."Id", "a"."AccessFailedCount", "a"."Bio", "a"."City", "a"."ConcurrencyStamp", "a"."Country", "a"."Email", "a"."EmailConfirmed", "a"."FirstName", "a"."LastName", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."ProfilePhoto", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName", "c"."CommentId", "c"."Comment", "c"."CommentTime", "c"."PostId", "c"."UserFullName", "c"."UserImage", "l"."LikesId", "l"."LikedPostPostId", "l"."UserWhoLikedId", "t"."CategoryId", "t"."PostId", "t"."CategoryId0", "t"."CategoryName"
+FROM "Post" AS "p"
+LEFT JOIN "AspNetUsers" AS "a" ON "p"."PostCreatorId" = "a"."Id"
+LEFT JOIN "Comments" AS "c" ON "p"."PostId" = "c"."PostId"
+LEFT JOIN "Likes" AS "l" ON "p"."PostId" = "l"."LikedPostPostId"
+LEFT JOIN (
+    SELECT "p0"."CategoryId", "p0"."PostId", "c0"."CategoryId" AS "CategoryId0", "c0"."CategoryName"
+    FROM "PostCategories" AS "p0"
+    INNER JOIN "Categories" AS "c0" ON "p0"."CategoryId" = "c0"."CategoryId"
+) AS "t" ON "p"."PostId" = "t"."PostId"
+WHERE "p"."PostId" = @__Id_0
+ORDER BY "p"."PostId", "a"."Id", "c"."CommentId", "l"."LikesId", "t"."CategoryId", "t"."PostId", "t"."CategoryId0"
+2021-03-08 23:53:43.9203|ERROR|Microsoft.EntityFrameworkCore.Query|An exception occurred while iterating over the results of a query for context type 'BLOGIT.DataAccess.DataAccessContext'.
+Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 1: 'no such column: c.UserImage'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteCommand.PrepareAndEnumerateStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteCommand.GetStatements(Stopwatch timer)+MoveNext()
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-03-08 23:53:43.9356|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 23:55:56.7865|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+=======
+2021-03-08 22:57:49.5915|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditRole' was not found. Searched locations: /Views/Admin/EditRole.cshtml, /Views/Shared/EditRole.cshtml
+2021-03-08 22:57:49.7195|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 22:59:07.7582|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditRole' was not found. Searched locations: /Views/Admin/EditRole.cshtml, /Views/Shared/EditRole.cshtml
+2021-03-08 22:59:07.7582|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 22:59:10.9225|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditRole' was not found. Searched locations: /Views/Admin/EditRole.cshtml, /Views/Shared/EditRole.cshtml
+2021-03-08 22:59:10.9254|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 22:59:14.7763|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditRole' was not found. Searched locations: /Views/Admin/EditRole.cshtml, /Views/Shared/EditRole.cshtml
+2021-03-08 22:59:14.7763|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 22:59:15.1553|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditRole' was not found. Searched locations: /Views/Admin/EditRole.cshtml, /Views/Shared/EditRole.cshtml
+2021-03-08 22:59:15.1553|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+2021-03-08 23:28:39.1448|ERROR|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view 'EditUsersInRole' was not found. Searched locations: /Views/Admin/EditUsersInRole.cshtml, /Views/Shared/EditUsersInRole.cshtml
+2021-03-08 23:28:39.2140|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.
+>>>>>>> master

@@ -1,0 +1,18 @@
+﻿@model BLOGIT.Models.UserServicesViewModels.CreateUserRoleViewModel
+
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <form asp-action="CreateRole" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RoleName" class="control-label"></label>
+                <input asp-for="RoleName" class="form-control" />
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-controller="Admin" asp-action="ListOfRoles" class="btn btn-info">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

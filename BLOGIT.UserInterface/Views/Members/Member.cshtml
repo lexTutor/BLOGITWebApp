@@ -1,0 +1,42 @@
+﻿@model BlogUserViewModel
+@{
+    ViewData["Title"] = "EditorDashboard";
+    var photopPath = "~/Images/" + (Model.ImagePath ?? "blog it.png");
+}
+
+<section class="page-intro">
+    <h1 class="hero-title text-white text-center justify-content-center align-items-center flex-column">Your Dashboard 😎 </h1>
+    <h2 class="Anime"> BLOGIT or forget it...</h2>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="user-details card">
+                    <img style="border-radius: 50%; width: 150px; height: 150px;" src="@photopPath" class="p-3 m-auto card-img-top" alt="..." asp-append-version="true"/>
+                    <h1 class="user-detail-title text-center">@Model.UserName</h1>
+                    <div class="card-body">
+                        <p class="user-detail-email text-center">@Model.Email</p>
+                        <p class="user-detail-phone text-center">@Model.PhoneNumber</p>
+                        <p class="user-detail-bio text-justify text-center card-text">
+                           @Model.Bio
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="" class="activity col-md-8">
+                <div class="btns-upper pt-3 pb-3">
+                    <a class="btn btn-change" href="#"><i class="fas fa-plus"></i>&nbsp;&nbsp;Activities</a>
+                </div>
+                <div class="tabs">
+                    <h4>@Model.UserName</h4>
+                    <div class="btn-tabs">
+                        <a class="btn btn-change" asp-action="MemberDetails" asp-route-userId="@Model.Id"><i class="far fa-user-edit"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

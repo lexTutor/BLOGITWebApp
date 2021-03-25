@@ -1,0 +1,118 @@
+﻿@model ReturnPostVM
+@{
+    ViewData["Title"] = "Post Details";
+    var photoPath = "~/Images/" + (Model.ImagePath ?? "Blog it.png");
+}
+
+    <link rel="stylesheet" href="~/Postfiles/style.css">
+    <body onload="wipeInput()">
+        <div class="j-post-body j-container j-flex-down">
+            <div class="j-container j-banner j-post-banner j-flex-down">
+                <h1 class="j-center-txt j-bold">POST DETAILS</h1>
+            </div>
+            <div class="j-grid j-post-main">
+                <form action="" method="get" class="j-search j-flex-row">
+                    <input class="form-control" type="search" placeholder="Search" />
+                    <span>
+                        <button type="submit" class="button1">Search</button>
+                    </span>
+                </form>
+                <!--left flex div -->
+                <div class="j-flex-down j-post-article j-left-txt">
+                    <img src="@photoPath" alt="Nike-shoe" class="mt-5 j-article-img" asp-append-version="true">
+                    <h2 class="display-4 font-weight-bolder text-left j-purple-txt">@Model.PostTitle</h2>
+                    <p class="h3 text-dark">@Model.PostCategories</p>
+                    <div class="j-article-body j-sm-txt">
+                        @Model.PostDetails
+                    </div>
+                    <div class="j-flex-row">
+                        <form asp-controller="Post" asp-action="LikePost" method="post">
+                            <input type="hidden" asp-for="@Model.PostId" hidden/>
+                            <button type="submit" style="border: none; background-color:#fbfaf8">
+                                <p class="j-left-txt h5"><i class="text-danger fas fa-heart"></i>&nbsp;@Model.Likes Likes</p>
+                            </button>
+                        </form>
+                        <p class="j-right-txt h5"><i class="fas fa-comment-alt"></i>&nbsp;@Model.CommentCount comments</p>
+                    </div>
+                </div>
+                <div class="j-comment-tray j-flex-down">
+                    @{
+                        foreach (var comment in Model.commentsForThisPost)
+                        {var photoPath2 = "~/Images/" + (comment.UserImage ?? "ezio-face-1642410cb4.jpg");
+                            <div class="j-comment j-grid j-left-txt">
+                                <img src="@photoPath2" alt="" class="j-img" asp-append-version="true" style="max-height: 35px; max-width: 60px; border-radius:  22%">
+                                <p class="j-bold j-md-txt j-purple-txt">@comment.UserFullName</p>
+                                <p>@comment.CommentTime</p>
+                                <p class="j-com">@comment.Comment</p>
+                            </div>
+                        }
+                    }
+                    <!-- <div class="j-container j-add-comment j-flex-down"> -->
+                    <form method="post" asp-action="CommentOnPost" asp-controller="Post" class="j-add-comment j-flex-down">
+                        <p class="j-bold j-md-txt j-purple-txt">Leave a comment</p>
+                        <input hidden asp-for="PostId" />
+                        <input id="CommentInput" type="text" placeholder=" Enter comment" required asp-for="addComment.Comment">
+                        <span asp-validation-for="addComment.Comment"></span> 
+                        <button id="buttonType" class="ml-4 mt-4 button1" type="submit"><span>Comment</span></button>
+                    </form>
+                    <!-- </div> -->
+                </div>
+                <!-- right flex div -->
+                <div class="j-flex-down j-blog-extras j-center-txt">
+                    <a asp-action="Advert" asp-controller="Post">
+                        <div class=" j-advert">
+                            <img src="~/Postfiles/beautiful-girl.jpg" alt="profile photo" class="j-img j-profile-photo">
+                            <div class="j-advert-content">
+                                <p class="j-moving-txt j-sm-txt j-bold">Become a premium member!!!</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="j-latest-posts j-flex-down">
+                        <!-- automate creation of child elements -->
+                        <h3 class="h2 font-weight-bolder text-left j-purple-txt">Latest Posts</h3>
+                        @{
+                            if (Model.MostRecentPosts != null)
+                            {
+                                foreach (var post in Model.MostRecentPosts)
+                                {
+                                    var recentPostPhotoPath = "~/Images/" + (post.ImagePath ?? "Blog it.png");
+                                    <div class="j-post-info j-grid">
+                                        <div class="j-latest-img-container">
+                                            <img src="@recentPostPhotoPath" alt="post image" class="j-img j-container" asp-append-version="true">
+                                        </div>
+                                        <p class="text-left h4 mt-1">
+                                            @post.PostTitle
+                                        </p>
+                                        <p class="text-left j-grey-txt">@post.CreationDate</p>
+                                        <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nisi ultricies dui condimentum interdum. Donec vestibulum turpis sit amet dolor ullamcorper dapibus. In mattis, nulla et posuere dignissim, sapien metus lobortis sapien, quis dictum augue libero ac enim. In accumsan enim quam, in vehicula odio consequat ac. Donec ex massa, finibus id condimentum...</p>
+                                        <a class="button1" asp-controller="Post" asp-action="Index" asp-route-postId="@post.PostId"><span>Read More</span></a>
+                                    </div>
+                                }
+                            }
+                        }
+                        <div class="mt-4 j-center-txt j-categories">
+                            <div class="category-title p-2 m-0 bg-light">
+                                <h3 class="j-bold j-purple-txt">Categories</h3>
+                            </div>
+                            <div class="mt-3 mb-3">
+                                <button type="button" class="btn btn-secondary">Primary</button>
+                                <button type="button" class="btn btn-secondary">Secondary</button>
+                                <button type="button" class="btn btn-secondary">Success</button>
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-secondary">Danger</button>
+                                <button type="button" class="btn btn-secondary">Warning</button>
+                                <button type="button" class="btn btn-secondary">Info</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+           </div>
+        </div>
+    </body>
+    <script>
+        window.onload = function () {
+            document.getElementById('CommentInput').value = '';
+        }
+
+    </script>
