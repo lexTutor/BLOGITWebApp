@@ -65,11 +65,11 @@ Contributions are not allowed for this project for the time being. Thank you for
 
 ## Authors
 
-* **Akpaka Chibuikem Rowland** - [Link](https://kingdomprofilepage.herokuapp.com/)
-* **Adebimpe Peter** - [Link](https://peteradebimpe.herokuapp.com/)
-* **Okereke Chukwuemeka John** - [Link](https://jhayprofilepage.herokuapp.com/)
+* **Akpaka Chibuikem Rowland** 
+* **Adebimpe Peter** 
+* **Okereke Chukwuemeka John**
 
 ## Acknowledgments
 
-* Mr Francis .Net developer and Decagon C# stack lead [LinkToGitHub](https://github.com/cidospark)
+* Mr Francis .Net developer and Decagon C# stack lead 
 * Decagon C# stack associates Squad006
